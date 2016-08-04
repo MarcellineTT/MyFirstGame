@@ -53,6 +53,9 @@
                                 <rect key="frame" x="41" y="445" width="60" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Ход!"/>
+                                <connections>
+                                    <action selector="go:" destination="Y17-Gp-GIb" eventType="touchUpInside" id="x1p-Zw-3ep"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="iIg-Fs-zvz">
                                 <rect key="frame" x="130" y="430" width="60" height="60"/>
@@ -73,6 +76,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cube_img" destination="iIg-Fs-zvz" id="g8y-Kr-7yW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VeE-bD-OMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

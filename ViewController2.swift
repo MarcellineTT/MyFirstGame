@@ -30,6 +30,22 @@ class ViewController2: UIViewController {
         view.addSubview(pers2v)
     }
     
+    @IBOutlet weak var cube_img: UIImageView!
+    
+    func DiceGo() -> Int {
+        let random_cube = Int(arc4random_uniform(6)+1)
+        let link_cube:String = "cube" + String(random_cube) + ".png"
+        let cubei: UIImage = UIImage(named: link_cube)!
+        cube_img.image = cubei
+        view.addSubview(cube_img)
+        return random_cube
+        
+    }
+    @IBAction func go(sender: UIButton) {
+        var clic_go = DiceGo()
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
