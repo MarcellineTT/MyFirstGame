@@ -57,15 +57,20 @@ class ViewController2: UIViewController {
         return random_cube
         
     }
+    
+    func pers2go() {
+        dicep2 += DiceGo()
+        if (dicep2 < 63) {
+            pers2_view()
+        }
+    }
+    
     @IBAction func go(sender: UIButton) {
         dicep1 += DiceGo()
         if (dicep1 < 63) {
             pers1_view()
         }
-        dicep2 += DiceGo()
-        if (dicep2 < 63) {
-            pers2_view()
-        }
+        _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(ViewController2.pers2go), userInfo: nil, repeats: false)
         
     }
     
