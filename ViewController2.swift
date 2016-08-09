@@ -9,6 +9,11 @@
 import UIKit
 var dicep1 = 0
 var dicep2 = 0
+var pers1win: Bool = false
+var pers2win: Bool = false
+
+
+
 
 
 
@@ -23,6 +28,10 @@ class ViewController2: UIViewController {
     var x: [Int] = [0,40,80,120,160,200,240,280,280,240,200,160,120,80,40,0,0,40,80,120,160,200,240,280,280,240,200,160,120,80,40,0,0,40,80,120,160,200,240,280,280,240,200,160,120,80,40,0,0,40,80,120,160,200,240,280,280,240,200,160,120,80,40,0]
     var y: [Int] = [300,300,300,300,300,300,300,300,260,260,260,260,260,260,260,260,220,220,220,220,220,220,220,220,180,180,180,180,180,180,180,180,140,140,140,140,140,140,140,140,100,100,100,100,100,100,100,100,60,60,60,60,60,60,60,60,20,20,20,20,20,20,20,20]
     
+    
+    @IBOutlet weak var progress_p1: UILabel!
+    @IBOutlet weak var progress_p2: UILabel!
+    @IBOutlet weak var go: UIButton!
     
     func pers1_view() {
         pers1v.image = pers1i
@@ -59,19 +68,48 @@ class ViewController2: UIViewController {
     }
     
     func pers2go() {
-        dicep2 += DiceGo()
+        dicep2 += DiceGo() + 30
         if (dicep2 < 63) {
             pers2_view()
+        }else {
+            if (pers2win != true) {
+                dicep2 = 63
+                pers2_view()
+                pers2win = true
+            } else {
+                dicep2 = 0
+                pers2_view()
+                dicep1 = 0
+                pers1_view()
+                pers2win = false
+                progress_p1.text = "Позиция первого игрока: \(dicep1)"
+            }
         }
+        progress_p2.text = "Позиция второго игрока: \(dicep2)"
+        go.enabled = true
     }
     
     @IBAction func go(sender: UIButton) {
         dicep1 += DiceGo()
         if (dicep1 < 63) {
             pers1_view()
+            go.enabled = false
+            _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(ViewController2.pers2go), userInfo: nil, repeats: false)
+        } else {
+            if (pers1win != true) {
+                dicep1 = 63
+                pers1_view()
+                pers1win = true
+            } else {
+                dicep1 = 0
+                pers1_view()
+                dicep2 = 0
+                pers2_view()
+                pers1win = false
+                progress_p2.text = "Позиция второго игрока: \(dicep2)"
+            }
         }
-        _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(ViewController2.pers2go), userInfo: nil, repeats: false)
-        
+        progress_p1.text = "Позиция первого игрока: \(dicep1)"
     }
     
     

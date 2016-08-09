@@ -78,6 +78,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="cube_img" destination="iIg-Fs-zvz" id="g8y-Kr-7yW"/>
+                        <outlet property="go" destination="2QZ-hL-amH" id="nyb-8B-nmv"/>
+                        <outlet property="progress_p1" destination="HVv-NE-Gfd" id="1kd-oB-aDc"/>
+                        <outlet property="progress_p2" destination="d0b-9k-cHd" id="Gj4-x2-g81"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VeE-bD-OMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -86,7 +89,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1.png" width="60" height="60"/>
+        <image name="1.png" width="320" height="320"/>
         <image name="map.png" width="320" height="320"/>
     </resources>
 </document>
