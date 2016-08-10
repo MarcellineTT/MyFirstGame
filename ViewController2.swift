@@ -7,22 +7,21 @@
 //
 
 import UIKit
+import AVFoundation
 var dicep1 = 0
 var dicep2 = 0
 var pers1win: Bool = false
 var pers2win: Bool = false
 
-
-
-
-
-
 class ViewController2: UIViewController {
     
-    let pers1i: UIImage = UIImage(named: "pikachu.png")!
+    var go_sound = AVAudioPlayer()
+    var go_sound2 = AVAudioPlayer()
+    
+    let pers1i: UIImage = UIImage(named: "Detective_Pikachu.png")!
     let pers1v: UIImageView = UIImageView()
     
-    let pers2i: UIImage = UIImage(named: "jigglypuff.png")!
+    let pers2i: UIImage = UIImage(named: "Bulbasaur.png")!
     let pers2v: UIImageView = UIImageView()
     
     var x: [Int] = [0,40,80,120,160,200,240,280,280,240,200,160,120,80,40,0,0,40,80,120,160,200,240,280,280,240,200,160,120,80,40,0,0,40,80,120,160,200,240,280,280,240,200,160,120,80,40,0,0,40,80,120,160,200,240,280,280,240,200,160,120,80,40,0]
@@ -68,7 +67,17 @@ class ViewController2: UIViewController {
     }
     
     func pers2go() {
-        dicep2 += DiceGo() + 30
+        dicep2 += DiceGo()
+        let sound2 = NSURL(fileURLWithPath:
+            NSBundle.mainBundle().pathForResource("bulb_sound", ofType: "mp3")!)
+        do{
+            go_sound2 = try AVAudioPlayer(contentsOfURL: sound2)
+            go_sound2.prepareToPlay()
+            go_sound2.play()
+        }
+        catch {
+            print("Error!")
+        }
         if (dicep2 < 63) {
             pers2_view()
         }else {
@@ -91,16 +100,44 @@ class ViewController2: UIViewController {
     
     @IBAction func go(sender: UIButton) {
         dicep1 += DiceGo()
+        let sound = NSURL(fileURLWithPath:
+            NSBundle.mainBundle().pathForResource("pika_sound", ofType: "mp3")!)
+        do{
+            go_sound = try AVAudioPlayer(contentsOfURL: sound)
+            go_sound.prepareToPlay()
+            go_sound.play()
+        }
+        catch {
+            print("Error!")
+        }
         if (dicep1 < 63) {
+            if (dicep2 != 63) {
             pers1_view()
             go.enabled = false
             _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(ViewController2.pers2go), userInfo: nil, repeats: false)
+            } else {
+                // Processing victory of the second player (pers2win)
+                let alert = UIAlertController(title: "Ты проиграл :(", message: "Сорян. Удачи в следующей игре!", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                dicep1 = 0
+                pers1_view()
+                dicep2 = 0
+                pers2_view()
+                pers1win = false
+                progress_p2.text = "Позиция второго игрока: \(dicep2)"
+                pers2win = false
+            }
         } else {
             if (pers1win != true) {
                 dicep1 = 63
                 pers1_view()
                 pers1win = true
             } else {
+                // Processing the first player to win (pers1win)
+                let alert = UIAlertController(title: "Ты победил!", message: "Поздравляю!", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
                 dicep1 = 0
                 pers1_view()
                 dicep2 = 0

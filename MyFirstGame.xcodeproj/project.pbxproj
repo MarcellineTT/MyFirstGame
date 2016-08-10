@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730E2E7F1D5B6B5900BD84FF /* Bulbasaur.png in Resources */ = {isa = PBXBuildFile; fileRef = 730E2E7B1D5B6B5900BD84FF /* Bulbasaur.png */; };
+		730E2E821D5B6B5900BD84FF /* Pikachu_SSB4.png in Resources */ = {isa = PBXBuildFile; fileRef = 730E2E7E1D5B6B5900BD84FF /* Pikachu_SSB4.png */; };
+		730E2E861D5B6D6C00BD84FF /* Detective_Pikachu.png in Resources */ = {isa = PBXBuildFile; fileRef = 730E2E851D5B6D6C00BD84FF /* Detective_Pikachu.png */; };
+		730E2E8C1D5B7C8A00BD84FF /* pika_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 730E2E8B1D5B7C8A00BD84FF /* pika_sound.mp3 */; };
+		730E2E8E1D5B7D2000BD84FF /* bulb_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 730E2E8D1D5B7D2000BD84FF /* bulb_sound.mp3 */; };
 		735C95FB1D4E801B00E077CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735C95FA1D4E801B00E077CE /* AppDelegate.swift */; };
 		735C95FD1D4E801B00E077CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735C95FC1D4E801B00E077CE /* ViewController.swift */; };
 		735C96001D4E801B00E077CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735C95FE1D4E801B00E077CE /* Main.storyboard */; };
@@ -20,11 +25,14 @@
 		735C96191D4F6E3600E077CE /* cube5.png in Resources */ = {isa = PBXBuildFile; fileRef = 735C96121D4F6E3600E077CE /* cube5.png */; };
 		735C961A1D4F6E3600E077CE /* cube6.png in Resources */ = {isa = PBXBuildFile; fileRef = 735C96131D4F6E3600E077CE /* cube6.png */; };
 		735C961B1D4F6E3600E077CE /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 735C96141D4F6E3600E077CE /* map.png */; };
-		735C96221D4F945700E077CE /* jigglypuff.png in Resources */ = {isa = PBXBuildFile; fileRef = 735C96201D4F945700E077CE /* jigglypuff.png */; };
-		735C96231D4F945700E077CE /* pikachu.png in Resources */ = {isa = PBXBuildFile; fileRef = 735C96211D4F945700E077CE /* pikachu.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		730E2E7B1D5B6B5900BD84FF /* Bulbasaur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bulbasaur.png; sourceTree = "<group>"; };
+		730E2E7E1D5B6B5900BD84FF /* Pikachu_SSB4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pikachu_SSB4.png; sourceTree = "<group>"; };
+		730E2E851D5B6D6C00BD84FF /* Detective_Pikachu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Detective_Pikachu.png; sourceTree = "<group>"; };
+		730E2E8B1D5B7C8A00BD84FF /* pika_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pika_sound.mp3; sourceTree = "<group>"; };
+		730E2E8D1D5B7D2000BD84FF /* bulb_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bulb_sound.mp3; sourceTree = "<group>"; };
 		735C95F71D4E801B00E077CE /* MyFirstGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		735C95FA1D4E801B00E077CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		735C95FC1D4E801B00E077CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,8 +48,6 @@
 		735C96121D4F6E3600E077CE /* cube5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube5.png; sourceTree = "<group>"; };
 		735C96131D4F6E3600E077CE /* cube6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube6.png; sourceTree = "<group>"; };
 		735C96141D4F6E3600E077CE /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
-		735C96201D4F945700E077CE /* jigglypuff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jigglypuff.png; sourceTree = "<group>"; };
-		735C96211D4F945700E077CE /* pikachu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pikachu.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +94,11 @@
 				735C96121D4F6E3600E077CE /* cube5.png */,
 				735C96131D4F6E3600E077CE /* cube6.png */,
 				735C96141D4F6E3600E077CE /* map.png */,
-				735C96201D4F945700E077CE /* jigglypuff.png */,
-				735C96211D4F945700E077CE /* pikachu.png */,
+				730E2E7B1D5B6B5900BD84FF /* Bulbasaur.png */,
+				730E2E7E1D5B6B5900BD84FF /* Pikachu_SSB4.png */,
+				730E2E851D5B6D6C00BD84FF /* Detective_Pikachu.png */,
+				730E2E8B1D5B7C8A00BD84FF /* pika_sound.mp3 */,
+				730E2E8D1D5B7D2000BD84FF /* bulb_sound.mp3 */,
 			);
 			path = MyFirstGame;
 			sourceTree = "<group>";
@@ -152,16 +161,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				730E2E8E1D5B7D2000BD84FF /* bulb_sound.mp3 in Resources */,
+				730E2E861D5B6D6C00BD84FF /* Detective_Pikachu.png in Resources */,
 				735C961A1D4F6E3600E077CE /* cube6.png in Resources */,
-				735C96221D4F945700E077CE /* jigglypuff.png in Resources */,
+				730E2E821D5B6B5900BD84FF /* Pikachu_SSB4.png in Resources */,
 				735C96051D4E801B00E077CE /* LaunchScreen.storyboard in Resources */,
 				735C96181D4F6E3600E077CE /* cube4.png in Resources */,
 				735C96151D4F6E3600E077CE /* cube1.png in Resources */,
 				735C961B1D4F6E3600E077CE /* map.png in Resources */,
+				730E2E8C1D5B7C8A00BD84FF /* pika_sound.mp3 in Resources */,
 				735C96161D4F6E3600E077CE /* cube2.png in Resources */,
 				735C96171D4F6E3600E077CE /* cube3.png in Resources */,
 				735C96191D4F6E3600E077CE /* cube5.png in Resources */,
-				735C96231D4F945700E077CE /* pikachu.png in Resources */,
+				730E2E7F1D5B6B5900BD84FF /* Bulbasaur.png in Resources */,
 				735C96021D4E801B00E077CE /* Assets.xcassets in Resources */,
 				735C96001D4E801B00E077CE /* Main.storyboard in Resources */,
 			);
